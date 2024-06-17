@@ -1,3 +1,59 @@
 body {
-  background-color: pink;
+  padding: 0%;
+  margin: 0%;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 100vh;
+}
+
+.my-list-nav {
+  background-color: #06141b;
+  padding: 20px;
+  height: auto;
+}
+
+.my-task-container {
+  background-color: #253745;
+  height: auto;
+}
+
+/*.my-list-item {
+}*/
+
+.my-list-head,
+li {
+  color: white;
+  padding: 1rem;
+}
+
+.new-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.new-list-button {
+  color: white;
+  background-color: #06141b;
+  border: 0px;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+#new-list-input {
+  color: white;
+  background-color: transparent;
+  border: none;
+  margin: 10px 0;
+  border-bottom: 2px solid white;
+  box-sizing: border-box;
+}
+
+#new-list-input:focus {
+  outline: none;
+  border-bottom-color: #007bff;
 }

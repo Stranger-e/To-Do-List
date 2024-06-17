@@ -25,4 +25,20 @@ export const initial = () => {
   let listItem2 = document.createElement('li');
   listItem2.innerText = 'List 2';
   myListItems.appendChild(listItem2);
+
+  let newList = document.createElement('div');
+  newList.classList.add('new-list');
+  myListNav.appendChild(newList);
+
+  let newListButton = document.createElement('button');
+  newListButton.classList.add('new-list-button');
+  newListButton.innerText = '+';
+  newList.appendChild(newListButton);
+
+  let newListInput = document.createElement('input');
+  newListInput.setAttribute('type', 'text');
+  newListInput.setAttribute('id', 'new-list-input');
+  newListInput.setAttribute('name', 'new-list-input');
+  newListInput.setAttribute('placeholder', 'project');
+  newList.appendChild(newListInput);
 };
