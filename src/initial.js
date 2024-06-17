@@ -22,10 +22,6 @@ export const initial = () => {
   listItem1.innerText = 'List 1';
   myListItems.appendChild(listItem1);
 
-  let listItem2 = document.createElement('li');
-  listItem2.innerText = 'List 2';
-  myListItems.appendChild(listItem2);
-
   let newList = document.createElement('div');
   newList.classList.add('new-list');
   myListNav.appendChild(newList);
@@ -40,5 +36,6 @@ export const initial = () => {
   newListInput.setAttribute('id', 'new-list-input');
   newListInput.setAttribute('name', 'new-list-input');
   newListInput.setAttribute('placeholder', 'project');
+  newListInput.classList.add('new-list-input');
   newList.appendChild(newListInput);
 };
