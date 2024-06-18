@@ -19,7 +19,8 @@ export const initial = () => {
   myListNav.appendChild(myListItems);
 
   let listItem1 = document.createElement('li');
-  listItem1.innerText = 'List 1';
+  listItem1.innerText = 'All';
+  listItem1.classList.add('list-item');
   myListItems.appendChild(listItem1);
 
   let newList = document.createElement('div');

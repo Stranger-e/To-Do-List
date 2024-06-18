@@ -37,22 +37,6 @@ li {
   font-size: 1.4rem;
 }
 
-/*.list-edit-button,
-.list-delete-button {
-  background-color: transparent;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: larger;
-}
-
-.list-edit-button:hover,
-.list-delete-button:hover {
-  background-color: #ccd0cf;
-  color: black;
-  border-radius: 12px;
-}*/
-
 .new-list {
   display: flex;
   align-items: center;
@@ -66,6 +50,7 @@ li {
   border: 0px;
   font-size: xx-large;
   font-weight: bolder;
+  cursor: pointer;
 }
 
 #new-list-input {
@@ -81,4 +66,43 @@ li {
 #new-list-input:focus {
   outline: none;
   border-bottom-color: #007bff;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 6fr 2fr 2fr;
+  cursor: pointer;
+}
+
+.btn {
+  cursor: pointer;
+  text-align: center;
+}
+
+.delete,
+.edit {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list-item:hover .delete,
+.list-item:hover .edit,
+.list-item.highlighted .delete,
+.list-item.highlighted .edit {
+  opacity: 1;
+}
+
+.delete:hover {
+  color: red;
+}
+
+.edit:hover {
+  color: #007bff;
+}
+
+.highlighted {
+  color: #007bff;
+  font-size: x-large;
+  font-weight: bolder;
+  transition: background-color 0.3s ease;
 }
