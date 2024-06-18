@@ -29,6 +29,12 @@ export const addListItem = () => {
       listItem.appendChild(editIconSpan);
       listItem.appendChild(deleteIconSpan);
 
+      document.querySelectorAll('.my-list-items li').forEach((item) => {
+        item.classList.remove('highlighted');
+      });
+
+      listItem.classList.add('highlighted');
+
       myListItems.appendChild(listItem);
 
       textNode.addEventListener('click', () => {

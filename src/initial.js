@@ -36,7 +36,7 @@ export const initial = () => {
   newListInput.setAttribute('type', 'text');
   newListInput.setAttribute('id', 'new-list-input');
   newListInput.setAttribute('name', 'new-list-input');
-  newListInput.setAttribute('placeholder', 'project');
+  newListInput.setAttribute('placeholder', 'Project');
   newListInput.classList.add('new-list-input');
   newList.appendChild(newListInput);
 };
