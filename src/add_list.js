@@ -53,6 +53,13 @@ export const addListItem = () => {
         listItem.remove();
       });
 
+      editIconSpan.addEventListener('click', () => {
+        newListInput.value = textNode.textContent;
+        listItem.remove();
+        newListInput.focus();
+        newListInput.select();
+      });
+
       newListInput.value = '';
     }
   };
