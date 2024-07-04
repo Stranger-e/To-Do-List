@@ -49,6 +49,10 @@ export const addListItem = () => {
         }
       });
 
+      deleteIconSpan.addEventListener('click', () => {
+        listItem.remove();
+      });
+
       newListInput.value = '';
     }
   };
