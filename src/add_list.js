@@ -37,6 +37,9 @@ export const addListItem = () => {
 
       myListItems.appendChild(listItem);
 
+      const event = new Event('itemHighlighted');
+      document.dispatchEvent(event);
+
       textNode.addEventListener('click', () => {
         if (listItem.classList.contains('highlighted')) {
           listItem.classList.remove('highlighted');
