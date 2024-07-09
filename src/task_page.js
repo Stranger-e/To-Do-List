@@ -14,13 +14,44 @@ export const taskPage = () => {
     if (highlightedItem) {
       taskHead.innerText = highlightedItem.textContent;
     } else {
-      taskHead.innerText = 'All';
+      taskHead.innerText = 'All Tasks';
     }
   };
 
   document.addEventListener('itemHighlighted', updateTaskHeading);
 
-  addListItem();
+  const addAndHighlightItem = () => {
+    addListItem();
+
+    const newItem = document.querySelector(
+      '.my-list-items .list-item:last-child'
+    );
+    if (newItem) {
+      document.querySelectorAll('.my-list-items .list-item').forEach((item) => {
+        item.classList.remove('highlighted');
+      });
+
+      newItem.classList.add('highlighted');
+      updateTaskHeading();
+    }
+  };
+
+  addAndHighlightItem();
 
   updateTaskHeading();
+
+  document
+    .querySelector('.my-list-items')
+    .addEventListener('click', (event) => {
+      if (event.target.classList.contains('list-item-name')) {
+        document
+          .querySelectorAll('.my-list-items .list-item')
+          .forEach((item) => {
+            item.classList.remove('highlighted');
+          });
+
+        event.target.closest('.list-item').classList.add('highlighted');
+        updateTaskHeading();
+      }
+    });
 };

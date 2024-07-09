@@ -19,7 +19,7 @@ export const initial = () => {
   myListNav.appendChild(myListItems);
 
   let listItem1 = document.createElement('li');
-  listItem1.innerText = 'All';
+  listItem1.innerText = 'All Tasks';
   listItem1.classList.add('list-item');
   myListItems.appendChild(listItem1);
 

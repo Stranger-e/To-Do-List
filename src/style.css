@@ -1,6 +1,22 @@
 body {
   padding: 0%;
   margin: 0%;
+  background-image: url(./assets/pexels-kubiceknov-924824.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
 #content {
@@ -10,14 +26,18 @@ body {
 }
 
 .my-list-nav {
-  background-color: #06141b;
+  background-color: transparent;
   padding: 20px;
   height: auto;
+  border: 2px solid pink;
+  border-radius: 12px;
 }
 
 .my-task-container {
-  background-color: #253745;
+  background-color: transparent;
   height: auto;
+  border: 2px solid pink;
+  border-radius: 12px;
 }
 
 .my-list-item {
@@ -29,12 +49,12 @@ body {
 
 .my-list-head,
 li {
-  color: white;
+  color: pink;
   padding: 5px;
 }
 
 li {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
 
 .new-list {
@@ -45,8 +65,8 @@ li {
 }
 
 .new-list-button {
-  color: white;
-  background-color: #06141b;
+  color: green;
+  background-color: transparent;
   border: 0px;
   font-size: xx-large;
   font-weight: bolder;
@@ -59,7 +79,7 @@ li {
   background-color: transparent;
   border: none;
   margin: 10px 0;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid pink;
   box-sizing: border-box;
 }
 
@@ -101,8 +121,13 @@ li {
 }
 
 .highlighted {
-  color: #007bff;
+  color: #d63484;
   font-size: x-large;
   font-weight: bolder;
   transition: background-color 0.3s ease;
+}
+
+.task-head {
+  color: pink;
+  text-align: center;
 }
