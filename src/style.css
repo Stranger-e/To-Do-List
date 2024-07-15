@@ -38,6 +38,7 @@ body::before {
   height: auto;
   border: 2px solid pink;
   border-radius: 12px;
+  padding: 20px;
 }
 
 .my-list-item {
@@ -130,4 +131,27 @@ li {
 .task-head {
   color: pink;
   text-align: center;
+}
+
+.add-task-icon {
+  text-align: center;
+  font-size: xx-large;
+  color: #d63484;
+  font-weight: 1000;
+}
+
+.add-task-text {
+  color: pink;
+  font-weight: 1000;
+}
+
+.add-task-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  border: 0.4px solid pink;
+  border-radius: inherit;
+  padding: 8px;
+  cursor: pointer;
 }
