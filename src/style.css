@@ -194,6 +194,9 @@ li {
   padding: 8px;
   box-sizing: border-box;
   border-radius: 10px;
+  background-color: transparent;
+  color: #d63484;
+  border: 1px solid pink;
 }
 
 #task-form button {
